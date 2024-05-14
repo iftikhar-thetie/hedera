@@ -1,0 +1,6 @@
+{
+  "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange",
+  "prettier.vueIndentScriptAndStyle": true,
+  "cSpell.words": ["hedera"]
+}

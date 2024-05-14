@@ -1,0 +1,128 @@
+
+
+@import '@ag-grid-community/styles/ag-grid.css';
+@import '@ag-grid-community/styles/ag-theme-balham.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #000000;
+  scroll-behavior: smooth;
+  scrollbar-color: #4a5568 #2d3748;
+  scrollbar-width: auto;
+  font-family: 'Source Sans 3';
+}
+
+::-webkit-scrollbar {
+  width: 3px !important;
+  height: 3px !important;
+}
+
+
+.router-link-active {
+  @apply bg-blue-400/20 text-blue-400 font-bold
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(167, 148, 148, 0);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-600 rounded-lg;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.hide-scroll::-webkit-scrollbar-thumb {
+  @apply bg-neutral-600;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0);
+}
+.thin-scroll::-webkit-scrollbar {
+  width: 2px !important;
+  height: 2px !important;
+}
+
+.hide-scroll:hover::-webkit-scrollbar-thumb {
+  @apply bg-neutral-400;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+
+/* AG GRID CSS */
+.ag-theme-balham-dark {
+  --ag-background-color: theme(colors.neutral.900);
+  --ag-selected-row-background-color: rgba(30,58,138,0.5);
+  --ag-foreground-color: theme(colors.neutral.100);
+  --ag-balham-active-color: theme(colors.neutral.600);
+  --ag-header-background-color: null;
+  --ag-header-column-separator: true;
+  --ag-header-column-separator-height: 100%;
+  --ag-header-column-separator-width: 0px;
+  --ag-header-column-separator-color: theme(colors.neutral.800);
+  --ag-header-foreground-color: theme(colors.neutral.400);
+  --ag-odd-row-background-color: null;
+  --ag-modal-overlay-background-color: transparent;
+  --ag-row-hover-color: theme(colors.neutral.800);
+  --ag-font-family: ('Source Sans 3');
+  --ag-font-size: 12px;
+  --ag-borders: none;
+  --ag-borders-row: solid 1px;
+  --ag-row-border-color: theme(colors.neutral.800);
+  --ag-borders-critical: solid 1px;
+  --ag-border-color: theme(colors.neutral.800);
+}
+
+.ag-header-cell-text,
+.ag-header-group-text,
+.ag-cell {
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ag-header-row-column-group {
+  --tw-divide-x-reverse: 0;
+  --tw-bg-opacity: 1;
+  border-right-width: calc(1px * var(--tw-divide-x-reverse));
+  border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
+}
+
+.ag-theme-balham-dark .ag-header-group-cell-label {
+  flex-direction: row-reverse;
+}
+
+.ag-theme-balham-dark .ag-header-row-column-group {
+  height: 80px;
+}
+
+.ag-theme-balham-dark .ag-header-group-cell-label {
+  flex-direction: row-reverse;
+}
+
+.ag-root ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.ag-root ::-webkit-scrollbar-track {
+  --webkit-box-shadow: inset 0 0 2px rgba(167, 148, 148, 0);
+  border-radius: 10px;
+}
+
+.ag-root ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #64748b;
+  --webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+}
+/* AG GRID CSS END */
